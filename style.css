@@ -644,3 +644,586 @@ img {
         gap: 18px;
     }
 }
+
+/* =========================================
+   WEEK 4 — MULTI-PAGE WEBSITE STYLING
+========================================= */
+
+/* Common Navigation for Week 4 Pages */
+
+header:has(.nav-links) {
+    background: #171717;
+}
+
+header:has(.nav-links) .navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 22px 5%;
+    color: white;
+    background: #171717;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #bdbdbd;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+}
+
+
+/* Common Page Hero Sections */
+
+.about-hero,
+.services-hero,
+.contact-hero {
+    padding: 100px 8%;
+    background: #f7f6f3;
+    text-align: center;
+}
+
+.about-hero h1,
+.services-hero h1,
+.contact-hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.about-hero p:not(.section-label),
+.services-hero > p:last-child,
+.contact-hero > p:last-child {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #666;
+    font-size: 16px;
+}
+
+
+/* About Hero */
+
+.about-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    text-align: left;
+    padding: 90px 8%;
+}
+
+.about-content h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(38px, 5vw, 60px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.about-content p:not(.section-label) {
+    color: #666;
+    margin-bottom: 18px;
+}
+
+.about-image {
+    height: 420px;
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Story Section */
+
+.story-section {
+    padding: 90px 10%;
+    text-align: center;
+}
+
+.story-section > p {
+    max-width: 800px;
+    margin: auto;
+    color: #666;
+    line-height: 1.9;
+}
+
+
+/* Mission Section */
+
+.mission-section {
+    padding: 90px 10%;
+    text-align: center;
+    background: #171717;
+    color: white;
+}
+
+.mission-section > div {
+    max-width: 750px;
+    margin: auto;
+}
+
+.mission-section p:not(.section-label) {
+    color: #ccc;
+    font-size: 17px;
+}
+
+
+/* Values */
+
+.values-section,
+.team-section {
+    padding: 90px 8%;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.value-card {
+    padding: 30px 22px;
+    background: #f7f6f3;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+.value-card span {
+    display: block;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.value-card h3 {
+    margin-bottom: 10px;
+}
+
+.value-card p {
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* Team */
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 280px));
+    justify-content: center;
+    gap: 30px;
+}
+
+.team-card {
+    text-align: center;
+    padding: 25px;
+    background: #f7f6f3;
+}
+
+.team-photo {
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e5e5e5;
+    font-size: 65px;
+    margin-bottom: 20px;
+}
+
+.team-card h3 {
+    margin-bottom: 5px;
+}
+
+.team-card p {
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* Services */
+
+.services-section,
+.pricing-section {
+    padding: 90px 8%;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    border: 1px solid #e5e5e5;
+    padding: 35px 28px;
+    background: white;
+    transition: 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.service-icon {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.service-card > p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.service-card h4 {
+    margin-bottom: 10px;
+}
+
+.service-card ul {
+    padding-left: 20px;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.service-price {
+    font-weight: 700;
+    color: #171717 !important;
+    font-size: 16px !important;
+}
+
+.service-btn {
+    display: inline-block;
+    background: #171717;
+    color: white;
+    border: 1px solid #171717;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.service-btn:hover {
+    background: white;
+    color: #171717;
+}
+
+
+/* Pricing Cards */
+
+.pricing-section {
+    background: #f7f6f3;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.pricing-card {
+    background: white;
+    padding: 35px 25px;
+    text-align: center;
+    border: 1px solid #e5e5e5;
+}
+
+.pricing-card h3 {
+    margin-bottom: 15px;
+}
+
+.pricing-price {
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.pricing-card > p:not(.pricing-price) {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+
+/* Services CTA */
+
+.services-cta {
+    padding: 85px 8%;
+    text-align: center;
+    background: #171717;
+    color: white;
+}
+
+.services-cta h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(30px, 4vw, 45px);
+    margin-bottom: 15px;
+}
+
+.services-cta p {
+    color: #ccc;
+    margin-bottom: 25px;
+}
+
+.services-cta .service-btn {
+    background: white;
+    color: #171717;
+    border-color: white;
+}
+
+.services-cta .service-btn:hover {
+    background: transparent;
+    color: white;
+}
+
+
+/* Contact Page */
+
+.contact-section {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 70px;
+    padding: 90px 8%;
+    align-items: start;
+}
+
+.contact-form-container h2,
+.contact-info h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.contact-form-container > p,
+.contact-info > p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+    background: #f7f6f3;
+    color: #171717;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.contact-form .form-group input:focus,
+.contact-form .form-group textarea:focus {
+    border-color: #171717;
+}
+
+.contact-form .form-group label {
+    color: #333;
+    font-weight: 600;
+}
+
+.contact-form .service-btn {
+    width: 100%;
+}
+
+.contact-info {
+    background: #f7f6f3;
+    padding: 35px;
+}
+
+.contact-info-item {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 28px;
+    align-items: flex-start;
+}
+
+.contact-info-item > span {
+    font-size: 24px;
+}
+
+.contact-info-item h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.contact-info-item p {
+    color: #666;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+
+/* Common Footer */
+
+.footer {
+    text-align: center;
+    padding: 45px 20px 20px;
+}
+
+.footer h2 {
+    margin-bottom: 10px;
+}
+
+.footer p {
+    margin-bottom: 8px;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN — TABLET & MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    header:has(.nav-links) .navbar {
+        flex-direction: column;
+        gap: 18px;
+        padding: 20px 12px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .about-hero {
+        grid-template-columns: 1fr;
+        padding: 65px 6%;
+        gap: 35px;
+    }
+
+    .about-image {
+        height: 320px;
+    }
+
+    .about-hero h1 {
+        font-size: 40px;
+    }
+
+    .about-hero p:not(.section-label) {
+        font-size: 14px;
+    }
+
+    .services-hero,
+    .contact-hero {
+        padding: 70px 6%;
+    }
+
+    .services-hero h1,
+    .contact-hero h1 {
+        font-size: 40px;
+    }
+
+    .story-section,
+    .mission-section,
+    .values-section,
+    .team-section,
+    .services-section,
+    .pricing-section {
+        padding: 65px 6%;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+        margin: auto;
+    }
+
+    .services-grid,
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-section {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 65px 6%;
+    }
+
+    .contact-info {
+        padding: 25px 20px;
+    }
+
+    .contact-form-container h2,
+    .contact-info h2 {
+        font-size: 28px;
+    }
+
+    .services-cta {
+        padding: 65px 6%;
+    }
+}
+
+
+/* Small Mobile Screens */
+
+@media (max-width: 400px) {
+
+    .nav-links {
+        gap: 10px 14px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .about-hero h1,
+    .services-hero h1,
+    .contact-hero h1 {
+        font-size: 34px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card,
+    .pricing-card {
+        padding: 28px 20px;
+    }
+
+    .contact-section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}

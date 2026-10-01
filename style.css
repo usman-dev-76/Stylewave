@@ -1227,3 +1227,57 @@ header:has(.nav-links) .navbar {
         padding-right: 5%;
     }
 }
+/* =========================================
+   PRODUCT COLLECTION PAGE
+========================================= */
+
+.product-card {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card .service-price {
+    margin-top: auto;
+    margin-bottom: 18px;
+}
+
+.product-card .service-btn {
+    align-self: flex-start;
+}
+
+.product-icon {
+    font-size: 45px;
+    margin-bottom: 18px;
+}
+
+.pricing-card {
+    transition: 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.pricing-card .service-btn {
+    margin-top: 5px;
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .product-card {
+        min-height: auto;
+    }
+
+    .product-card .service-price {
+        margin-top: 10px;
+    }
+
+    .product-icon {
+        font-size: 40px;
+    }
+
+}
